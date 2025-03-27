@@ -12,7 +12,8 @@ import pandas as pd
 import phydrus as ps
 
 ws = "example5"
-exe = os.path.join(os.getcwd(), "phydrus/source_code", "hydrus")
+exe = os.path.join(os.getcwd(), "source_code", "hydrus")
+print(exe)
 
 # Create the basic model
 desc = "Example 5 - Grass Field Problem (Hupselse Beek 1982)"
@@ -37,7 +38,7 @@ profile = ps.create_profile(0, [-50, -100], h=-200, dx=10, mat=m.index,
 ml.add_profile(profile)
 ml.add_obs_nodes([10, 20])
 
-atm = pd.read_csv("data/ex2.csv", index_col=0)
+atm = pd.read_csv(os.getcwd()+"/phydrus_main/examples/data/ex2.csv", index_col=0)
 atm["cTop"] = 0
 atm["cBot"] = 0
 atm.loc[0, "cTop"] = 1

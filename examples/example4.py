@@ -18,7 +18,7 @@ import pandas as pd
 import phydrus as ps
 
 ws = "example4"
-exe = os.path.join(os.getcwd(), "phydrus/source_code", "hydrus")
+exe = os.path.join(os.getcwd(), "source_code", "hydrus")
 
 # Create the basic model
 desc = "Steady state water flow in a layered soil profile"
@@ -58,7 +58,7 @@ df = ml.read_nod_inf(times=[100])
 ml.profile["h"] = df["Head"].values
 
 # Atmospheric data
-atm = pd.read_csv("data/ex4.csv", decimal=",", sep=";")
+atm = pd.read_csv(os.getcwd()+"/phydrus_main/examples/data/ex4.csv", decimal=",", sep=";")
 ml.add_atmospheric_bc(atm)
 
 times1 = ml.add_time_info(tmax=360, print_times=True, dt=0.001,

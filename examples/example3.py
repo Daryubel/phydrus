@@ -12,7 +12,7 @@ import pandas as pd
 import phydrus as ps
 
 ws = "example3"
-exe = os.path.join(os.getcwd(), "hydrus")
+exe = os.path.join(os.getcwd(), "phydrus/source_code", "hydrus")
 
 # Create the basic model
 desc = "Root uptake with meteorological data"

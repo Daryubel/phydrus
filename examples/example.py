@@ -10,7 +10,7 @@ import os
 import phydrus as ps
 
 ws = "example"
-exe = os.path.join(os.getcwd(), "hydrus")
+exe = os.path.join(os.getcwd(), "phydrus/source_code", "hydrus")
 
 # Create the basic model
 desc = "Infiltration and drainage in a large caisson"
